@@ -540,6 +540,19 @@ Thus when you create a TODO, it is almost always your name that is given.
       ...
     end
     ```
+* <a name="use-double-splat"></a>Use a double splat when expecting a dynamic list of parameters</sup>
+
+    ```ruby
+    # bad
+    def obliterate(params = {})
+      ...
+    end
+
+    # good
+    def obliterate(**params)
+      ...
+    end
+    ```
 
 * <a name="no-single-line-methods"></a>Avoid single-line methods. Although
     they are somewhat popular in the wild, there are a few peculiarities about
